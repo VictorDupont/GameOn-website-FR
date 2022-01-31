@@ -2,7 +2,6 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Reservation</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/modal.css" />
 		<link
@@ -11,7 +10,7 @@
 		/>
 		<link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" />
 		<title>GameOn</title>
-		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+		<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
 	</head>
 	<body>
 		<div class="topnav" id="myTopnav">
@@ -40,12 +39,12 @@
 						Vous aimez jouer ? Notre prochain évènement gaming est ouvert aux
 						réservations... Places limitées !
 					</p>
-					<button class="btn-signup modal-btn">je m'inscris</button>
+					<button class="btn-signup modal-btn">Inscription</button>
 				</div>
 				<div class="hero-img">
 					<img src="assets/images/bg_img.jpg" alt="img" />
 				</div>
-				<button class="btn-signup modal-btn">je m'inscris</button>
+				<button class="btn-signup modal-btn">Inscription</button>
 			</div>
 
 			<div class="bground">
@@ -54,6 +53,12 @@
 					<div class="modal-body">
 						<div id="success-message">
 							<span>Merci ! Votre réservation a été reçue.</span>
+							<input
+								id="success-close"
+								class="btn-submit button"
+								type="button"
+								value="Fermer"
+							/>
 						</div>
 						<form
 							id="reservation"
@@ -244,7 +249,7 @@
 								class="btn-submit"
 								type="submit"
 								class="button"
-								value="C'est parti"
+								value="C'est parti !"
 							/>
 						</form>
 					</div>
