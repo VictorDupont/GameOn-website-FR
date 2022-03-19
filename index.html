@@ -39,18 +39,19 @@
 						Vous aimez jouer ? Notre prochain évènement gaming est ouvert aux
 						réservations... Places limitées !
 					</p>
-					<button class="btn-signup modal-btn">Inscription</button>
+					<button class="btn-signup modal-btn">Je m'inscris</button>
 				</div>
 				<div class="hero-img">
 					<img src="assets/images/bg_img.jpg" alt="img" />
 				</div>
-				<button class="btn-signup modal-btn">Inscription</button>
+				<button class="btn-signup modal-btn">Je m'incris</button>
 			</div>
 
 			<div class="bground">
 				<div class="content">
 					<span class="close" id="close-modal"></span>
 					<div class="modal-body">
+						<span class="close" id="close-modal-success"></span>
 						<div id="success-message">
 							<span>Merci ! Votre réservation a été reçue.</span>
 							<input
@@ -66,6 +67,7 @@
 							action="index.html"
 							method="get"
 							onsubmit="validation(event);"
+							novalidate
 						>
 							<div
 								class="formData"
@@ -79,7 +81,7 @@
 									type="text"
 									id="firstname"
 									name="firstname"
-									value="John"
+									placeholder="John"
 									minlength="2"
 								/><br />
 							</div>
@@ -95,7 +97,7 @@
 									type="text"
 									id="lastname"
 									name="lastname"
-									value="Doe"
+									placeholder="Doe"
 								/><br />
 							</div>
 							<div
@@ -110,7 +112,7 @@
 									type="email"
 									id="email"
 									name="email"
-									value="contact@johndoe.com"
+									placeholder="contact@johndoe.com"
 								/><br />
 							</div>
 							<div
@@ -125,7 +127,7 @@
 									type="date"
 									id="birthdate"
 									name="birthdate"
-									value="1953-02-25"
+									placeholder="1953-02-25"
 								/><br />
 							</div>
 							<div
@@ -144,14 +146,14 @@
 									name="quantity"
 									min="0"
 									max="99"
-									value="10"
+									placeholder="10"
 								/>
 							</div>
 							<p class="text-label">
 								A quel tournoi souhaitez-vous participer cette année ?
 							</p>
 							<div
-								class="formData"
+								class="formData formcity"
 								id="data-city"
 								data-error="Une ville doit être choisie pour participer à un tournoi"
 								data-error-visible="false"
@@ -232,13 +234,24 @@
 								data-error="L'acceptation des conditions d'utilisation est obligatoire"
 								data-error-visible="false"
 							>
-								<input class="checkbox-input" type="checkbox" id="cgu" checked />
-								<label class="checkbox2-label" for="checkbox1" required>
+								<input
+									class="checkbox-input"
+									type="checkbox"
+									id="cgu"
+									name="cgu"
+									required
+								/>
+								<label class="checkbox2-label" for="cgu">
 									<span class="checkbox-icon"></span>
 									J'ai lu et accepté les conditions d'utilisation.
 								</label>
 								<br />
-								<input class="checkbox-input" type="checkbox" id="checkbox2" />
+								<input
+									class="checkbox-input"
+									type="checkbox"
+									id="checkbox2"
+									name="checkbox2"
+								/>
 								<label class="checkbox2-label" for="checkbox2">
 									<span class="checkbox-icon"></span>
 									Je Je souhaite être prévenu des prochains évènements.
@@ -246,11 +259,18 @@
 								<br />
 							</div>
 							<input
+								id="btnsubmit"
 								class="btn-submit"
 								type="submit"
 								class="button"
 								value="C'est parti !"
 							/>
+							<div
+								class="formData formDataError"
+								id="data-form"
+								data-error="Veuillez revérifier le formulaire..."
+								data-error-visible="false"
+							></div>
 						</form>
 					</div>
 				</div>

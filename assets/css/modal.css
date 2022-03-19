@@ -112,7 +112,7 @@ img {
 }
 
 main {
-	font-size: 130%;
+	font-size: 100%;
 	font-weight: bolder;
 	color: black;
 	padding-top: 0.5vw;
@@ -194,6 +194,10 @@ main {
 .modal-body {
 	padding: 15px 8%;
 	margin: 15px auto;
+	min-height: 850px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 label {
@@ -218,12 +222,12 @@ input {
 }
 .formData[data-error]::after {
 	content: attr(data-error);
-	font-size: 0.4em;
+	font-size: 0.57em;
 	color: #e54858;
 	display: block;
 	margin-top: 7px;
 	margin-bottom: 7px;
-	text-align: right;
+	text-align: left;
 	line-height: 0.3;
 	opacity: 0;
 	transition: 0.3s;
@@ -278,7 +282,7 @@ input[data-error]::after {
 	opacity: 0;
 }
 .checkbox-input {
-	display: none;
+	opacity: 0;
 }
 .checkbox-input:checked + .checkbox-label .checkbox-icon::after,
 .checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
@@ -344,6 +348,19 @@ input[data-error]::after {
 
 .btn-submit {
 	margin-top: 20px;
+
+	bottom: 30px;
+	left: 142px;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.formDataError {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
 }
 /* custom select styles */
 .custom-select {
@@ -545,6 +562,14 @@ footer {
 	.hero-headline,
 	.hero-text {
 		text-align: center;
+	}
+}
+
+@media screen and (max-width: 341px) {
+	.formcity {
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
 	}
 }
 
